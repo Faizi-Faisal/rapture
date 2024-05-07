@@ -1,0 +1,23 @@
+.servicetitlesection {
+    padding-top: 0px;
+    padding: 50px;
+}
+.card-container .card{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .whatwedorow {
+        display: none;
+    }
+    .card-container .card{
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 10px;
+    }
+  }
