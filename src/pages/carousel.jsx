@@ -42,6 +42,28 @@ const Carousel = () => {
     setShowModal(false);
   };
 
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const place = formData.get('place');
+    const number = formData.get('number');
+    const appointmentDate = formData.get('appointmentDate');
+
+    // Format the message with the form data
+    const message = `Name: ${name}\n Place: ${place}\n Contact Number: ${number}\n Appointment Date: ${appointmentDate}`;
+    
+    // Construct the WhatsApp URL with the message
+    const whatsappURL = `https://wa.me/+918590653501?text=${encodeURIComponent(message)}`;
+    
+    // Open the WhatsApp URL in a new window
+    window.open(whatsappURL, '_blank');
+
+    // Close the modal
+    handleCloseModal();
+  };
+
   return (
     <div className="carousel">
       {images.map((image, index) => (
@@ -52,7 +74,7 @@ const Carousel = () => {
         >
           <div className="maincarouseltitle text-overlay">
             <h2>Welcome to<br />Rapture Therapy Centre</h2>
-            <button className="button" onClick={handleShowModal}>Book Appointment <i className="ri-stethoscope-line"></i></button>
+            <button className="button" onClick={handleShowModal}>Request Appointment <i className="ri-stethoscope-line"></i></button>
           </div>
         </div>
       ))}
@@ -78,7 +100,7 @@ const Carousel = () => {
             Schedule Appointment <i className="ri-calendar-schedule-line"></i>
           </div>
           <div className='formbackground'>
-            <form className="appointment-form">
+            <form className="appointment-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name:</label>
                 <input type="text" className="form-control" id="name" name="name" required/>
