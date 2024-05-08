@@ -74,7 +74,7 @@ const Carousel = () => {
         >
           <div className="maincarouseltitle text-overlay">
             <h2>Welcome to<br />Rapture Therapy Centre</h2>
-            <button className="button" onClick={handleShowModal}>Request Appointment <i className="ri-stethoscope-line"></i></button>
+            <button className="button" onClick={handleShowModal}>Book Appointment <i className="ri-stethoscope-line"></i></button>
           </div>
         </div>
       ))}
