@@ -8,7 +8,13 @@ const MeetandGreet = () => {
       <hr />
       <div className="row">
         <div className="leftsidetreatment col">
-          <img src="your-image-url.jpg" alt="Treatment" />
+          <div className="image-container">
+            <img src="/monika.jpg" alt="Treatment" className='rounded' />
+            <div className="paragraph-box">
+              <h3>Monika Prasenan</h3>
+              <p>Speech and Language Therapist, Certified Oral Placement Therapy Level 1</p>
+            </div>
+          </div>
         </div>
         <div className="rightsidetreatment col">
           <h3>Our Treatment:</h3>
