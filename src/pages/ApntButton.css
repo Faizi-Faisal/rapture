@@ -31,14 +31,32 @@
     padding: 20px;
 }
 
+/* Close button */
+.close-button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-button i {
+    color: white;
+    font-size: 20px;
+}
+
 /* Appointment form header */
 .appointment-form-header {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
-
-/* Appointment form */
 
 /* Additional styles for form elements */
 .appointment-form .form-group {
@@ -47,7 +65,7 @@
 
 .appointment-form label {
     display: block;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .appointment-form input[type="text"],
@@ -73,9 +91,8 @@
     background-color: #056a12;
 }
 
-  
-  @media (min-width: 700px) {
+@media (min-width: 700px) {
     .HomeStickyButton {
         display: none;
     }
-  }
+}
