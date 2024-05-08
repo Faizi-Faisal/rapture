@@ -41,12 +41,3 @@
         padding-right: 40px;
       }
   }
-
-  @media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        /* Safari CSS */
-        .container999 {
-            height: 150vh; /* Adjust the height as needed */
-        }
-    }
-}
