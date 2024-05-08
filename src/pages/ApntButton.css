@@ -1,20 +1,15 @@
 .HomeStickyButton {
     position: fixed;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    bottom: 25px;
+    right: 25px;
     z-index: 90;
-    width: 40%;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: none;
-    background-color: rgb(12, 97, 79);
+    background-color: rgb(7, 108, 24);
     color: white;
-    border-radius: 16px;
+    border-radius: 50%;
+    font-size: 28px;
   }
   
   @media (min-width: 700px) {
