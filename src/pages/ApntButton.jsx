@@ -16,6 +16,9 @@ const ApntButton = () => {
 
       {showAppointmentForm && (
         <div className="appointment-form-container">
+          <div className="close-button" onClick={toggleAppointmentForm}>
+            <i className="ri-close-line"></i>
+          </div>
           <div className="appointment-form-header">
             Schedule Appointment
           </div>
