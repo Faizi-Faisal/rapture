@@ -4,7 +4,7 @@ import './ApntButton.css'
 const ApntButton = () => {
   return (
     <div>
-      <button className='HomeStickyButton'><i class="ri-whatsapp-line"></i> &nbsp;Book Appointment</button>
+      <button className='HomeStickyButton'><i class="ri-whatsapp-line"></i></button>
     </div>
   )
 }
