@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './carousel.css'; // Import CSS for styling
+import { Modal } from 'react-bootstrap'; // Import Bootstrap modal component
 
 const Carousel = () => {
   // Define images array with URLs
@@ -11,6 +12,7 @@ const Carousel = () => {
 
   // State for current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false); // State for modal visibility
 
   // Function to handle navigation indicator click
   const handleIndicatorClick = (index) => {
@@ -30,6 +32,16 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, [images.length, intervalTime]); // Re-run effect when the number of images or interval time changes
 
+  // Function to handle modal show
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  // Function to handle modal close
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="carousel">
       {images.map((image, index) => (
@@ -40,7 +52,7 @@ const Carousel = () => {
         >
           <div className="maincarouseltitle text-overlay">
             <h2>Welcome to<br />Rapture Therapy Centre</h2>
-            <button className="button">Book Appointment <i class="ri-stethoscope-line"></i></button>
+            <button className="button" onClick={handleShowModal}>Book Appointment <i className="ri-stethoscope-line"></i></button>
           </div>
         </div>
       ))}
@@ -55,6 +67,39 @@ const Carousel = () => {
           />
         ))}
       </div>
+
+      {/* Bootstrap modal for appointment form */}
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <div className="appointment-form-container">
+          <div className="close-button" onClick={handleCloseModal}>
+            <i className="ri-close-line"></i>
+          </div>
+          <div className="appointment-form-header">
+            Schedule Appointment <i className="ri-calendar-schedule-line"></i>
+          </div>
+          <div className='formbackground'>
+            <form className="appointment-form">
+              <div className="form-group">
+                <label htmlFor="name">Name:</label>
+                <input type="text" className="form-control" id="name" name="name" required/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="place">Place:</label>
+                <input type="text" className="form-control" id="place" name="place" required/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="number">Contact Number:</label>
+                <input type="number" className="form-control" id="number" name="number" required/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="appointmentDate">Appointment Date:</label>
+                <input type="date" className="form-control" id="appointmentDate" name="appointmentDate" required/>
+              </div>
+              <button type="submit" className="btn btn-primary"><i className="ri-whatsapp-line"></i> Book Appointment</button>
+            </form>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };
