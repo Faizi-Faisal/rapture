@@ -22,6 +22,7 @@ const ApntButton = () => {
           <div className="appointment-form-header">
             Schedule Appointment
           </div>
+          <div className='formbackground'>
           <form className="appointment-form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -37,6 +38,7 @@ const ApntButton = () => {
             </div>
             <button type="submit" className="btn btn-primary">Book Appointment</button>
           </form>
+          </div>
         </div>
       )}
     </div>
