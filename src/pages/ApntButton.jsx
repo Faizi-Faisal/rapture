@@ -20,23 +20,23 @@ const ApntButton = () => {
             <i className="ri-close-line"></i>
           </div>
           <div className="appointment-form-header">
-            Schedule Appointment
+            Schedule Appointment <i class="ri-calendar-schedule-line"></i>
           </div>
           <div className='formbackground'>
           <form className="appointment-form">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
-              <input type="text" className="form-control" id="name" name="name" />
+              <input type="text" className="form-control" id="name" name="name" required/>
             </div>
             <div className="form-group">
               <label htmlFor="place">Place:</label>
-              <input type="text" className="form-control" id="place" name="place" />
+              <input type="text" className="form-control" id="place" name="place" required/>
             </div>
             <div className="form-group">
               <label htmlFor="appointmentDate">Appointment Date:</label>
-              <input type="date" className="form-control" id="appointmentDate" name="appointmentDate" />
+              <input type="date" className="form-control" id="appointmentDate" name="appointmentDate" required/>
             </div>
-            <button type="submit" className="btn btn-primary">Book Appointment</button>
+            <button type="submit" className="btn btn-primary"><i class="ri-whatsapp-line"></i> Book Appointment</button>
           </form>
           </div>
         </div>
