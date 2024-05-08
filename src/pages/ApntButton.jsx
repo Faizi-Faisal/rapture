@@ -33,6 +33,10 @@ const ApntButton = () => {
               <input type="text" className="form-control" id="place" name="place" required/>
             </div>
             <div className="form-group">
+              <label htmlFor="number">Contact Number:</label>
+              <input type="number" className="form-control" id="number" name="number" required/>
+            </div>
+            <div className="form-group">
               <label htmlFor="appointmentDate">Appointment Date:</label>
               <input type="date" className="form-control" id="appointmentDate" name="appointmentDate" required/>
             </div>
