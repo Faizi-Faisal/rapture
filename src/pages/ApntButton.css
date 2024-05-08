@@ -10,7 +10,11 @@
     color: white;
     border-radius: 50%;
     font-size: 28px;
-  }
+    display: flex; /* Add flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
   
   @media (min-width: 700px) {
     .HomeStickyButton {
