@@ -24,7 +24,7 @@
     bottom: 90px; /* Adjust the bottom position */
     right: 25px;
     z-index: 100; /* Ensure it's above the WhatsApp button */
-    width: 300px; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
