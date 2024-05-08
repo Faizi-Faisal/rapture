@@ -10,7 +10,7 @@ const ServiceSection = () => {
         <div className="row justify-content-md-center">
           <div className="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
             <h2 className="mb-4 text-center" style={{ color: '#3d878a', fontWeight: 'bold' }}>-  Our Services  -</h2>
-            <p className="text-secondary mb-2 text-center">We provide best service in speech & language therapy section.</p>
+            <p className="text-secondary mb-2 text-center">We provide best service in speech & language therapy sector.</p>
             <hr className="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
           </div>
         </div>
